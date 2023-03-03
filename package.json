@@ -1,0 +1,25 @@
+{
+  "name": "w-15_nodejs-rabbitmq",
+  "version": "1.0.0",
+  "description": "-open source distributed message queue\r  -supports many communication protocol\r  -act just like a middle ware where producer can produce a request \r   on  a server and consumer consume that request by pushing the server\r -use amqp protocol\r -establish a two way communication",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "publish": "node publisher.js",
+    "consumer":"node consumer.js",
+    "consumer2":"node consumer2.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zz9876/w-15_NodeJS-RabbitMQ.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zz9876/w-15_NodeJS-RabbitMQ/issues"
+  },
+  "homepage": "https://github.com/zz9876/w-15_NodeJS-RabbitMQ#readme",
+  "dependencies": {
+    "amqplib": "^0.10.3"
+  }
+}
