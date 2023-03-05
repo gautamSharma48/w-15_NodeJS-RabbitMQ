@@ -8,15 +8,12 @@ async function connect() {
     //create a channel
     const channel = await connection.createChannel();
     //create a queue
-    const result = await channel.assertQueue("logdata",{durable:false});
+    const result = await channel.assertQueue("asdf",{durable:true});
     //send msg on queue
-    channel.sendToQueue("logdata",Buffer.from(JSON.stringify(msg)));
+    channel.sendToQueue("asdf",Buffer.from(JSON.stringify(msg)));
 
     console.log(`job sent successfully ${msg.number}`);
-    setTimeout(function() {
-      connection.close();
-      process.exit(0)
-      }, 500);
+   
     
   } catch (err) {
     console.log(err);

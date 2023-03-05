@@ -39,3 +39,9 @@ The empty string as second parameter means that we don't want to send the messag
 
 # binding:-
 We've already created a fanout exchange and a queue. Now we need to tell the exchange to send messages to our queue. That relationship between exchange and a queue is called a binding.
+
+# Buffer:-
+ -buffer is a class that provide you handle binary data.
+ -it is a raw memory allocation that can store and manipulate binary data, such as bytes of an image file, audio file, or any other file that contains non-textual data.
+
+ -A buffer is similar to an array of integers but corresponds to a raw memory allocation 
