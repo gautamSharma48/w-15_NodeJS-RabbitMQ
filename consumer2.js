@@ -7,10 +7,10 @@ async function connect() {
     //create a channel
     const channel = await connection.createChannel();
     //listen a queue
-    const result = await channel.assertQueue("logdata");
+    const result = await channel.assertQueue("asdf");
     //consume msg on queue
     console.log("waiting for messages");
-    await channel.consume("logdata", (message) => {
+    await channel.consume("asdf", (message) => {
       const res = JSON.parse(message.content);
       console.log(`Received job with input ${res.number}`);
           //acknowledge when received the message
