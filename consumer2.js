@@ -2,7 +2,7 @@ const amqp = require("amqplib");
 
 async function connect() {
   try {
-    //create a connection-they are completely differnet channel
+    //create a connection-
     const connection = await amqp.connect("amqp://localhost:5672");
     //create a channel
     const channel = await connection.createChannel();
@@ -14,9 +14,7 @@ async function connect() {
       const res = JSON.parse(message.content);
       console.log(`Received job with input ${res.number}`);
           //acknowledge when received the message
-          if(res.number === 7) channel.ack(message)
-        
-        },{noAck:false});
+    },{noAck:true});
   } catch (err) {
     console.log(err);
   }
